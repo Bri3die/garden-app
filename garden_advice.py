@@ -1,31 +1,26 @@
-# Hardcoded values for the season and plant type
-season = "summer"  # TODO: Replace with input() to allow user interaction.
-plant_type = "flower"  # TODO: Replace with input() to allow user interaction.
+# Get season and plant type from the user instead of hardcoding values.
+# This allows the program to give personalised advice each time it runs.
+season = input("Enter the current season (summer/winter): ").strip().lower()
+plant_type = input("Enter your plant type (flower/vegetable): ").strip().lower()
 
-# Variable to hold gardening advice
+# Variable to hold the gardening advice that will be built up below
 advice = ""
 
-# Determine advice based on the season
+# Determine advice based on the season the user entered
 if season == "summer":
     advice += "Water your plants regularly and provide some shade.\n"
 elif season == "winter":
     advice += "Protect your plants from frost with covers.\n"
 else:
-    advice += "No advice for this season.\n"
+    advice += "No advice available for this season.\n"
 
-# Determine advice based on the plant type
+# Determine advice based on the plant type the user entered
 if plant_type == "flower":
     advice += "Use fertiliser to encourage blooms."
 elif plant_type == "vegetable":
     advice += "Keep an eye out for pests!"
 else:
-    advice += "No advice for this type of plant."
+    advice += "No advice available for this type of plant."
 
-# Print the generated advice
+# Print the final combined advice for the user
 print(advice)
-
-# TODO: Examples of possible features to add:
-# - Add detailed comments explaining each block of code.
-# - Refactor the code into functions for better readability and modularity.
-# - Store advice in a dictionary for multiple plants and seasons.
-# - Recommend plants based on the entered season.
